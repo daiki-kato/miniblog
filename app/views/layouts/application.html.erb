@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Miniblog</title>
+  <link rel="stylesheet" href="./style.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+  <script   src="https://code.jquery.com/jquery-3.4.1.js"   integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="   crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+</head>
+<body>
+<nav class="#4dd0e1 cyan lighten-2">
+  <div class="nav-wrapper">
+    <a href="/posts" class="brand-logo">miniBlog</a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <% if user_signed_in? %>
+      <li><a href="/posts/newpost">投稿</a></li>
+      <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+      <% else %>
+      <li><a href="/users/sign_in">ログイン</a></li>
+      <li><a href="/users/sign_up">ユーザー登録</a></li>
+      <% end %>
+    </ul>
+  </div>
+</nav>
+
+<%= yield %>
+
+<script type="text/javascript" src="./app.js"></script>
+
+</body>
+</html>

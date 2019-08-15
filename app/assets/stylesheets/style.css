@@ -1,0 +1,39 @@
+html {
+  font-family: sans-serif;
+}
+
+.row {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 660px;
+}
+
+textarea {
+  height: auto;
+  min-height: 50px;
+}
+
+.contents h5 {
+  margin-top: 50px;
+}
+
+.btn {
+  margin-top: 10px;
+}
+
+.content_post {
+  padding: 0.5em 3em;
+  margin: 2em 0;
+  font-weight: bold;
+  border: solid 1px #000000;
+}
+.content_post {
+  margin: 5; 
+  padding: 1em;
+}
+
+
+
